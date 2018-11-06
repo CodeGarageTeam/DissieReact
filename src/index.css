@@ -12,3 +12,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.online-people-container {
+  flex: 3;
+  background-color: black;
+}
+
+.main-chat-container {
+  flex: 7;
+  background-color: bisque;
+}
