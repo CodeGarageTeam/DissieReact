@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
+import ChatList from './ChatList'
+import ChatInput from './ChatInput'
 
 class MainChat extends Component {
   constructor (props) {
     super (props)
     this.state = {
-      count: 0
+      messages: [
+        {
+          name: 'ema',
+          message: 'el senpai'
+        }
+      ]
     }
   }
 
-  updateCounter () {
-    this.setState({ count: this.state.count + 1 })
-  }
-
   render () {
+    
     return (
       <section className='main-chat-container'>
-        <button onClick={() => this.updateCounter()}>actualizar contador</button>
-        Contador: {this.state.count}
+        <ChatList messages={this.state.messages}/>
+        <ChatInput chatAdded={() => {}}/>
       </section>
     )
   }
